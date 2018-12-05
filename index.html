@@ -58,7 +58,7 @@
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/jenny.png);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Jenny Chen, PhD</a></h1>
-				<span class="position"><a href="#">Genome Scientist</a> in Cambridge, MA</span>
+				<span class="position"><a href="#">Genomicist</a> in Cambridge, MA</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
@@ -81,12 +81,14 @@
 			</div>
 			
 			<br>
+                        <br>
+                        <br>
 			<div class="colorlib-footer">	
-				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a> | 
+				<p><small><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<br>Template by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> 
-
-<span>Background vector is created by <a href="https://www.freepik.com/free-photos-vectors/background"> Ikatod - Freepik.com</a></span>
+<br><span>Background by <a href="https://www.freepik.com/free-photos-vectors/background"> Ikatod - Freepik.com</a></span>
 </small></p>
 
 
@@ -106,7 +108,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
 						   					<h1>Jenny Chen</h1>
-						   					<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
+						   					<p><a class="btn btn-primary btn-learn" href="files/Jenny_Chen_CV.2018.pdf" target="_blank">Download CV <i class="icon-download4"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -141,7 +143,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<div class="about-desc">
 										<span class="heading-meta">About Me</span>
 										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Jenny Chen</strong> I am interested in understanding the evolution of gene regulation and gene expression across mammalian species, and applying my research to improve the diagnostic and treatment of genetic diseases. I am primarily computational, though I have been known to occasionally step foot in the lab.</p>
+										<p><strong>Hi, I'm Jenny Chen.</strong> I am interested in understanding the evolution of gene regulation and gene expression across mammalian species, and applying my research to improve the diagnosis and treatment of genetic diseases. I am primarily computational, though I have been known to occasionally step foot in the wet lab.</p>
 										<p>I am currently a <a href="https://datascience.harvard.edu/" target="_blank">Harvard Data Science Postdoctoral Fellow</a>, working with the <a href="https://hoekstra.oeb.harvard.edu/" target = "_blank">Hoekstra Lab</a> and the <a href="http://eddylab.org/" target="_blank">Eddy Lab</a>. Prior to this, I received my PhD from the Bioinformatics and Integrative Genomics (BIG) program at MIT, where I was advised by Aviv Regev.</p>
 										<p>I enjoy sharing my science adventures through my <a href="https://www.twitter.com/jjennychenn" target="_blank">twitter</a> and <a href="https://www.instagram.com/jennythescientist" target="_blank">instagram</a>. My codebase is available through <a href="https://github.com/jjenny" target="_blank">github</a>.</p>
 									</div>
@@ -167,17 +169,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingOne">
 									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Mammalian expression evolution
-									            </a>
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Mammalian expression evolution</a>
 									        </h4>
 									    </div>
 									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 									         <div class="panel-body">
-									         <p>It is well-accepted that the evolutionary history of a gene helps predict its function and relationship to phenotypic traits. However, current comparative genomics methods focus primarily on sequence conservation, and methods for functional inference from comparative expression data are lacking.  </p>
+									         <p><img src="images/mammals.meanexp.png"></p>
+											 <p>The evolutionary history of a gene is frequently used to predict its function and relationship to phenotypic traits. However, current comparative genomics methods focus primarily on sequence conservation, and few methods exist for interpreting comparative expression data. </p>
 									         
-									         <p>Using RNA-seq data from 7 tissues across 17 mammalian species, I show that expression evolution across mammals is accurately modeled by the Ornstein-Uhlenbeck process, a commonly proposed model of continuous trait evolution. This model enables us to quantitatively identify expression pathways under neutral, stabilizing, and directional selection. Furthermore, I demonstrate novel applications of this model to parameterize the distribution of each gene’s optimal expression and detect deleterious expression levels in expression data from individual patients. </p>
+									         <p>Using RNA-sequencing data from 7 tissues across 17 mammalian species, I showed that expression evolution across mammals is a nonlinear process and accurately modeled by mathematical model called the Ornstein-Uhlenbeck (OU) process. I demonstrate how to use this model to identify expression pathways underlying conserved and lineage-specific phenotypes. Furthermore, I show how to use this model to estimate the distribution of each gene’s optimal expression level in a given tissue. For example, we may estimate a gene's "optimal expression distribution" to be 25 +/- 1.5 units in the liver, based on our evolutionary data. This distribution can then be used to detect deleterious expression levels (i.e. levels outside the optimal expression distribution) in patient expression data. </p>
 									         <p>This work provides a statistical framework for interpreting expression data across species and in disease. Evolutionary estimates of optimal gene expression is available at the <a href="https://portals.broadinstitute.org/evee/" target="_blank">EVEE Gene Browser</a>.
-
+									         <p>Paper: <a href="https://www.biorxiv.org/content/early/2017/12/04/229096" target="_blank">A quantitative model for characterizing the evolutionary history of mammalian gene<br>&emsp;&emsp;&emsp;&ensp;expression</a>. <em>bioRxiv</em>, Dec 2017. </p>
             
 									         </div>
 									    </div>
@@ -193,8 +195,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									        <div class="panel-body">
 									        <p><img src="images/lncrnas.png"></p>
 									         <p>The development of RNA-sequencing technology led to the discovery that thousands, of long noncoding RNAs (lncRNAs) are pervasively transcribed in the mammalian genome. Yet, the function of these genes are unknown.</p>
-									         <p>In a collaboration with <a href="http://garberlab.umassmed.edu/" target="_blank">Manuel Garber (UMass Medical)</a>, we developed a computational tool, <a href="http://slncky.github.io/" target="_blank"><em>slncky</em></a>, that identifies lncRNAs from RNA-sequencing data and examines the evolution of these genes.  Our tool discovers orthologous lncRNAs and quantifies metrics relevant for noncoding transcript evolution including: transcript-transcript identity (what percentage of the transcript sequence is transcribed in another species), splice site conservation, and indel rate.</p>
-									         <p>Our analysis reveals distinct patterns of selection, uncovering several classes of lncRNAs, likely with distinct functions.  Out of the tens and thousands of currently annotated lncRNAs, we identify 233 constrained lncRNAs which are browsable through the <a href="https://scripts.mit.edu/~jjenny/" target="_blank"><em>slncky</em> Evolution Browser</a>.</p>
+									         <p>In a collaboration with <a href="http://garberlab.umassmed.edu/" target="_blank">Manuel Garber (UMass Medical)</a>, we developed a computational tool, <a href="http://slncky.github.io/" target="_blank"><em>slncky</em></a>, that identifies lncRNAs from RNA-sequencing data and examines the evolutionary history of these genes.  Our tool discovers orthologous lncRNAs and calculates metrics relevant for noncoding transcript evolution such as transcript-transcript identity (what percentage of the transcript sequence is transcribed in another species) and splice site conservation.</p>
+									         <p>Our analysis revealed distinct patterns of selection, uncovering several classes of lncRNAs that likely each have distinct functions.  Out of the tens and thousands of currently annotated lncRNAs, we identify 233 constrained lncRNAs which are browsable through the <a href="https://scripts.mit.edu/~jjenny/" target="_blank"><em>slncky</em> Evolution Browser</a>.</p>
 									         <p>Paper: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0880-9" target="_blank">Evolutionary analysis across mammals reveals distinct classes of long non-coding RNAs</a>.<br>&emsp;&emsp;&emsp;<em>Genome Biology</em>, January 2016. </p>
 									        </div>
 									    </div>
@@ -209,7 +211,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 									        <div class="panel-body">
-									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>	
+									            <p>
+												In the summer of 2018, I had the awesome opportunity to visit the first molecular biology lab <b>inside</b> the Amazon Rainforest, and to use nanopore sequencing technology to sequence samples ranging from squirrel monkeys to dung beetles. This project is a collaboration between Mrinalini Watsa and Gideon Erkenswick, founders of <a href="https://fieldprojects.org/initiatives/greenlab/" target="_blank">The Green Lab</a>, as well as <a href="http://www.thenextgenscientist.com/" target="_blank">Aaron Pomerantz</a> and Stefan Prost, who are working to establish mobile laboratories to accelerate discovery in conservation and ecological genomics. <br><br>You can learn more about this project here: 
+												<br><iframe width="560" height="315" src="https://www.youtube.com/embed/rLDwuBl5tK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</p>	
 									        </div>
 									    </div>
 									</div>
@@ -231,6 +236,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="row">
 						<div class="col-md-12">
 				         <div class="timeline-centered">
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Postdoctoral Fellow, Eddy and Hoekstra Labs, Harvard</a> <span>2018-</span></h2>
+					                  <p>Uncovering the genetic basis of the evolution of innate behaviors across closely related species.</p>
+					               </div>
+					            </div>
+					         </article>
+
 					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
 
@@ -269,19 +287,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-4">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Undergraduate Student, Center for Clinical and Science Research, Stanford</a> <span>2007-2008</span></h2>
-					                  <p>Performed genotyping and maintenance of transgenic mice used for melanoma research.</p>
-					               </div>
-					            </div>
-					         </article>
-
 					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-none">
@@ -310,7 +315,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<i class="icon-mail"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>jenny at mit dot edu</p>
+									<p>jennifer underscore chen at fas dot harvard dot edu</p>
 								</div>
 							</div>
 
@@ -319,7 +324,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<i class="icon-map"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>Cambridge, MA</p>
+									<p>Rm 1008, 16 Divinity Avenue <br> Cambridge, MA</p>
 								</div>
 							</div>
 						</div>
