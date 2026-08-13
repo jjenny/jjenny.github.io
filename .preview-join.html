@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="The Chen Lab investigates the evolution and genetic control of innate behavior, combining comparative genomics, single-cell sequencing, and neurogenetics in Peromyscus deer mice." />
+  <meta name="keywords" content="Chen Lab, Jenny Chen, Peromyscus, deer mice, innate behavior, neuropeptide discovery, comparative genomics, single-nucleus RNA-seq, parental care, hypothalamus" />
+  <meta name="author" content="Jenny Chen" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Chen Lab" />
+  <meta property="og:description" content="Investigating the evolution and genetic control of innate behavior." />
+  <meta property="og:image" content="images/pero-mom.jpeg" />
+
+  <link rel="icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ------------------------------------------------------------------
+       Site tweaks layered on top of the template stylesheet: darker body
+       text, roomier line height, and small components (research cards,
+       research cards, contact blocks) drawn in the template's palette.
+       ------------------------------------------------------------------ -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-size: 17px; color: #4c5257; }
+    p { line-height: 1.8; }
+    .site-section p, .untree_co-section p { margin-bottom: 1.4rem; }
+    .intro-lead { font-size: 1.2rem; line-height: 1.65; color: #22262a; }
+    .site-section a:not(.btn), .untree_co-section a:not(.btn) { color: #2f7a5f; }
+    .site-section a:not(.btn):hover, .untree_co-section a:not(.btn):hover { color: #22624a; text-decoration: underline; }
+
+    /* Lab name in the navbar (the template's .logo is a 40x40 badge, so the
+       box is neutralised here and only the colour behaviour is kept) */
+    .site-nav .logo { position: static; width: auto; height: auto; margin-top: 2px; line-height: 1.2; border: 0; font-size: 28px; font-weight: 700; white-space: nowrap; text-decoration: none !important; }
+    .site-nav.scrolled .logo { position: static; top: auto; }
+    .site-nav .site-navigation .site-menu > li > a { font-size: 18px; padding: 10px 18px; }
+
+    /* Hero */
+    .hero-cta { margin-top: 2rem; }
+    .hero-cta .btn { margin: .3rem .25rem; }
+    .btn.btn-outline-light { border-color: rgba(255, 255, 255, .8); color: #ffffff; }
+    .btn.btn-outline-light:hover { background: #ffffff; color: #000000; }
+
+    /* Section subheadings */
+    .subhead { font-size: 24px; font-weight: 700; color: #000000; margin-top: 3rem; margin-bottom: 1.25rem; }
+    .label-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .09rem; text-transform: uppercase; color: #2f7a5f; margin-bottom: 1rem; }
+
+    /* "In the press" callout */
+    .press-callout { background: rgba(150, 187, 124, .09); border-left: 3px solid #96bb7c; border-radius: 0 8px 8px 0; padding: 1.35rem 1.6rem; margin: 2.25rem 0; }
+    .press-callout .press-label { font-size: 13px; font-weight: 700; letter-spacing: .09rem; text-transform: uppercase; color: #2f7a5f; margin-bottom: .4rem; }
+    .press-callout p:last-child { margin-bottom: 0; }
+
+    /* Figures */
+    .figure-block { margin-bottom: 1.75rem; }
+    .figure-block figcaption { font-size: .9rem; line-height: 1.55; color: #7b8085; margin-top: .85rem; }
+
+    /* People */
+    .person { background: #ffffff; border: 1px solid #e9e8e3; border-radius: 10px; overflow: hidden; height: 100%; transition: box-shadow .25s ease, transform .25s ease; }
+    .person:hover { box-shadow: 0 12px 28px rgba(0, 0, 0, .08); transform: translateY(-3px); }
+    .person-photo { position: relative; padding-bottom: 100%; background: #eef2ea; }
+    .person-photo img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+    .person-photo .person-initials { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 42px; font-weight: 700; letter-spacing: .05em; color: #a9c493; }
+    .person-body { padding: 1.35rem 1.4rem 1.5rem; }
+    .person-body h3 { font-size: 20px; margin-bottom: .3rem; }
+    .person-role { font-size: 13px; font-weight: 700; letter-spacing: .08rem; text-transform: uppercase; color: #2f7a5f; margin-bottom: 0; }
+    .person-links { font-size: .9rem; margin-top: .6rem; margin-bottom: 0; }
+
+    /* Publications */
+    .pub-year { font-size: 14px; font-weight: 700; letter-spacing: .09rem; text-transform: uppercase; color: #2f7a5f; margin: 2.5rem 0 1.25rem; }
+    .pub-item { margin-bottom: 1.6rem; }
+    .pub-item strong { color: #000000; }
+    .pub-note { font-size: .9rem; color: #7b8085; }
+
+    /* How to Join — Rome clip art scattered across the section background */
+    #join-section { position: relative; overflow: hidden; }
+    #join-section .join-doodles { position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; }
+    #join-section .join-doodles img { position: absolute; opacity: .7; }
+    #join-section .container { position: relative; z-index: 1; }
+    /* solid panel so the copy stays legible over the clip art */
+    #join-section .join-panel { background: #ffffff; border-radius: 10px; padding: 2.5rem 2.75rem 1.1rem; box-shadow: 0 8px 24px rgba(0, 0, 0, .05); }
+    @media (max-width: 575px) { #join-section .join-panel { padding: 1.75rem 1.5rem .35rem; } }
+
+    /* Footer */
+    .site-footer { font-size: .95rem; }
+    .site-footer .footer-credit { font-size: .75rem; color: #b6babd; margin-top: .4rem; }
+    .site-footer .footer-credit a { color: #b6babd; }
+    .site-footer .footer-credit a:hover { color: #8f9498; text-decoration: underline; }
+  </style>
+
+  <title>The Chen Lab &mdash; Evolution and Genetic Control of Innate Behavior</title>
+<style>
+#home-section, #about-section, #research-section, #people-section, #pub-section, .site-footer, .site-nav { display:none !important; }
+[data-aos] { opacity:1 !important; transform:none !important; }
+</style></head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <nav class="site-nav js-site-navbar mb-5 site-navbar-target">
+    <div class="container">
+      <div class="site-navigation text-center">
+
+        <a href="#home-section" class="logo float-left text-white smoothscroll">The Chen Lab</a>
+
+        <ul class="js-clone-nav ml-0 pl-0 d-none d-lg-inline-block site-menu mx-auto text-center">
+          <li><a href="#about-section" class="nav-link">Jenny Chen</a></li>
+          <li><a href="#research-section" class="nav-link">Research</a></li>
+          <li><a href="#people-section" class="nav-link">People</a></li>
+          <li><a href="#pub-section" class="nav-link">Publications</a></li>
+          <li><a href="#join-section" class="nav-link">How to Join</a></li>
+        </ul>
+
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block light d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="site-blocks-cover overlay" style="background-image: url(images/pero-mom.jpeg);" data-aos="fade" data-stellar-background-ratio="0.5" id="home-section">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+
+        <div class="col-lg-8">
+          <h1 class="text-white" data-aos="fade-up" data-aos-delay="0">THE CHEN LAB</h1>
+          <p data-aos="fade-up" data-aos-delay="100">Investigating the Evolution and Genetic Control of Innate Behavior</p>
+          <p class="hero-cta" data-aos="fade-up" data-aos-delay="200">
+            <a href="#research-section" class="btn btn-primary smoothscroll">Our Research</a>
+            <a href="#join-section" class="btn btn-outline-light smoothscroll">Join the Lab</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== Jenny Chen ===================== -->
+  <section class="site-section bg-light" id="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+          <figure class="figure-block mb-0">
+            <img src="images/genome_research.gif" alt="Cover of Genome Research, January 2019 (Volume 29, Number 1)" class="img-fluid">
+            <figcaption>Chen et al. <em>Genome Research</em> 2019. Cover art by Anna Hupalowska.</figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="100">
+          <p class="label-eyebrow">Principal Investigator</p>
+          <div class="section-heading">
+            <h2 class="h3">Jenny Chen, PhD</h2>
+          </div>
+
+          <p class="intro-lead">My research is inspired by the remarkable fact that a simple four-letter code generates the immense diversity we see across the tree of life.</p>
+
+          <p>I am passionate about developing high-throughput sequencing and computational approaches to understand the molecular mechanisms that give rise to this diversity, with a current focus on investigating innate animal behaviors.</p>
+
+          <p>I received my PhD in Bioinformatics and Integrative Genomics from MIT where I was advised by <a href="https://www.gene.com/scientists/our-scientists/aviv-regev" target="_blank" rel="noopener">Aviv Regev</a>. I then became a Harvard Data Science Fellow and NIH K99/R00 Fellow, and worked in collaboration with <a href="https://hoekstra.oeb.harvard.edu/" target="_blank" rel="noopener">Hopi Hoekstra</a> and <a href="http://eddylab.org/" target="_blank" rel="noopener">Sean Eddy</a> to study the genetic basis of monogamy-related behaviors in <em>Peromyscus</em> deer mice.</p>
+
+          <p class="mt-4">
+            <a href="files/Jenny_Chen_CV.2026.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== Research ===================== -->
+  <section class="site-section" id="research-section">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-center col-md-12 mb-5" data-aos="fade-up" data-aos-delay="0">
+          <h2>Research</h2>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <p class="intro-lead">Our research aims to investigate the <b>evolution of innate social behaviors</b> and <b>discover novel neuropeptides</b>. </p>
+
+          <p>To do so, we take advantage of evolutionary patterns of innate animal behaviors, and use comparative genomics approaches combined with techniques from neurogenetics and behavioral neuroscience. We work with non-traditional mammalian model organisms, like closely-related <em>Peromyscus</em> deer mouse species that have evolved a variety of innate behaviors despite their high degree of shared genetic similarity.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+
+          <h3 class="subhead" id="reproductive-behaviors">Genetic basis of monogamy-related behaviors</h3>
+
+          <p>Monogamy has independently evolved multiple times across the rodent lineage, and co-evolves with a suite of behaviors including biparental care, increase territoriality, and selective aggression. What genes encode for these behaviors and how they evolve to produce differences across species? To answer this, we use single-cell multiomics to characterize how hypothalamic neurons are evolving across monogamous and promiscuous rodent species, paired with neurogenetic approaches to identify key genetic changes driving this behavioral evolution </p>
+
+
+          <div class="press-callout" data-aos="fade-up" data-aos-delay="0">
+            <p class="press-label">In the Press</p>
+            <p>
+		<ul>
+		<li><a href="https://elifesciences.org/digests/103109/the-parenting-styles-of-deer-mice" target="_blank" rel="noopener">eLife feature</a> on the parenting styles of deer mice</li> 
+		<li><em>The Scientist</em>, <a href="https://www.the-scientist.com/on-a-wild-mouse-chase-to-understand-parenting-love-and-fear-72447" target="_blank" rel="noopener">&ldquo;On a Wild Mouse Chase to Understand Parenting, Love, and Fear&rdquo;</a>.</li>
+		</ul>
+	    </p>
+          </div>
+
+          <h3 class="subhead" id="neuropeptide-discovery">Neuropeptide Discovery</h3>
+
+          <p>Neuropeptides are critical signaling molecules that regulate diverse biological processes, yet some may remain undiscovered due to their small size and low abundance. We develop computational methods to discover novel neuropeptides and generate transgenic rodent models to investigate their function.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== People ===================== -->
+  <section class="site-section bg-light" id="people-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-12" data-aos="fade-up" data-aos-delay="0">
+          <div class="section-heading text-center">
+            <h2>People</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="person">
+            <div class="person-photo">
+              <img src="images/IMG_0113.jpeg" alt="Portrait of Jenny Chen">
+            </div>
+            <div class="person-body">
+              <h3>Jenny Chen, PhD</h3>
+              <p class="person-role">Group Leader</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="person">
+            <!-- Placeholder until a portrait is available: replace this whole
+                 .person-photo block with the <img> version used above. -->
+            <div class="person-photo">
+              <span class="person-initials" aria-hidden="true">SL</span>
+            </div>
+            <div class="person-body">
+              <h3>Sofya Lukashevich</h3>
+              <p class="person-role">Graduate Student</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- To add a lab member, copy one of the blocks above and swap the
+             photo, name, and role. -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== Publications ===================== -->
+  <section class="site-section" id="pub-section">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-center col-md-12 mb-5" data-aos="fade-up" data-aos-delay="0">
+          <h2>Publications</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto" data-aos="fade-up" data-aos-delay="100">
+
+          <p>The full publication list is available at <a href="https://scholar.google.com/citations?user=QIvEOakAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>. <span class="pub-note">Asterisks (*) mark equal contributions.</span></p>
+
+          <p class="pub-year mt-5">2024</p>
+
+          <p class="pub-item"><strong>Chen J</strong>, Richardson PR, Kirby C, Eddy SR, and HE Hoekstra. <a href="https://elifesciences.org/reviewed-preprints/103109" target="_blank" rel="noopener">Cellular evolution of the hypothalamic preoptic area of behaviorally divergent deer mice.</a> <em>eLife</em>. 2024; e103109.</p>
+
+          <p class="pub-item">Kautt A*, <strong>Chen J</strong>*, Lewarch CL, Hu C, Turner K, Lassance JM, Baier F, Bedford NL, Bendesky A, and HE Hoekstra. <a href="https://onlinelibrary.wiley.com/doi/10.1111/mec.17270" target="_blank" rel="noopener">Evolution of gene expression across brain regions in behaviorally divergent deer mice and their hybrids.</a> <em>Molecular Ecology</em>. 2024; e17270.</p>
+
+          <p class="pub-year">2019</p>
+
+          <p class="pub-item"><strong>Chen J</strong>, Swofford R, Johnson J, Cummings BB, Rogel N, Lindblad-Toh K, Haerty W, di Palma F, and A Regev. <a href="https://genome.cshlp.org/content/29/1/53.long" target="_blank" rel="noopener">A quantitative model for characterizing the evolutionary history of mammalian gene expression.</a> <em>Genome Research</em>. 2019; 29: 53-63.</p>
+
+          <p class="pub-year">2016</p>
+
+          <p class="pub-item"><strong>Chen J</strong>, Shishkin A, Zhu X, Kadri S, Hanna J, Regev A, and M Garber. <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0880-9" target="_blank" rel="noopener">Evolutionary analysis across mammals reveals distinct classes of long noncoding RNAs.</a> <em>Genome Biology</em>. 2016; 17: 19.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== How to Join ===================== -->
+  <section class="site-section bg-light" id="join-section">
+    <!-- Decorative clip art scattered across the background: the Rome and STEM
+         sets from Citrus & Mint Designs, mixed together. Faded via
+         .join-doodles img { opacity } so the text stays readable; hidden on
+         narrow screens. -->
+    <div class="join-doodles d-none d-md-block" aria-hidden="true">
+      <img src="images/citrusandmint_rome/citrusandmint_R%20colosseum.png" alt="" style="left: 1%; top: 3%; width: 190px; transform: rotate(-4deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20test%20tubes.png" alt="" style="left: 24%; top: 0; width: 100px; transform: rotate(9deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20dna.png" alt="" style="right: 29%; top: 1%; width: 105px; transform: rotate(-6deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_R%20vespa.png" alt="" style="right: 1%; top: 5%; width: 180px; transform: rotate(3deg);">
+
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20microscope.png" alt="" style="left: 6%; top: 37%; width: 105px; transform: rotate(5deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_R%20flag.png" alt="" style="right: 8%; top: 37%; width: 110px; transform: rotate(-5deg);">
+
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20molecule.png" alt="" style="left: 1%; top: 56%; width: 100px; transform: rotate(7deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20magnifying%20glass.png" alt="" style="right: 2%; top: 55%; width: 105px; transform: rotate(-8deg);">
+
+      <img src="images/citrusandmint_rome/citrusandmint_R%20gelato.png" alt="" style="left: 7%; top: 76%; width: 105px; transform: rotate(-6deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20graph.png" alt="" style="right: 8%; top: 74%; width: 125px; transform: rotate(4deg);">
+
+      <img src="images/citrusandmint_rome/citrusandmint_R%20italy.png" alt="" style="left: 19%; bottom: 2%; width: 105px; transform: rotate(8deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_R%20pantheon.png" alt="" style="left: 44%; bottom: 2%; width: 165px; transform: rotate(2deg);">
+      <img src="images/citrusandmint_rome/citrusandmint_STEM%20circuit%20boards.png" alt="" style="right: 19%; bottom: 1%; width: 120px; transform: rotate(-4deg);">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-center col-md-12 mb-5" data-aos="fade-up" data-aos-delay="0">
+          <h2>How to Join</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto join-panel" data-aos="fade-up" data-aos-delay="100">
+
+          <p class="intro-lead">We are looking for curious, collaborative people interested in working at the interface of genomics, evolution, and neuroscience. Backgrounds in computational or experimental biology are all welcome. The lab is based at <a href="https://www.embl.org/sites/rome/" target="_blank" rel="noopener">EMBL Rome</a>, in Monterotondo &mdash; about 20 minutes north of Rome.</p>
+
+          <p><strong>Prospective graduate students:</strong> I accept graduate students through the <a href="https://www.embl.org/about/info/embl-international-phd-programme/application/" target="_blank">EMBL PhD Program</a>. </p>
+
+          <p><strong>Prospective postdocs:</strong> send a brief description of your research interests and how they connect to the lab, along with your CV to jennifer.chen @ embl.it.</p>
+
+
+        </div>
+      </div>
+    </div> <!-- /.container -->
+  </section>
+
+
+  <div class="site-footer">
+
+    <div class="footer-dots"></div> <!-- /.footer-dots -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <p class="footer-credit mb-0">Template by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a></p>
+        </div>
+      </div>
+    </div> <!-- /.container -->
+  </div> <!-- /.site-footer -->
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/imagesloaded.pkgd.js"></script>
+
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>

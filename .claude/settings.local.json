@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=5000 --window-size=1400,2600 --screenshot=/tmp/chen_a.png \"file:///Volumes/eddy_lab/users/jjenny/bin/jjenny.github.io/index.html\")",
+      "Bash(python3 -)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=5000 --window-size=1400,2100 --screenshot=/tmp/chen_c.png \"file:///Volumes/eddy_lab/users/jjenny/bin/jjenny.github.io/.preview.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=6000 --window-size=1400,1500 --screenshot=/tmp/p2.png \"file:///Volumes/eddy_lab/users/jjenny/bin/jjenny.github.io/.preview.html\")"
+    ]
+  }
+}
