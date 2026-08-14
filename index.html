@@ -45,7 +45,24 @@
        box is neutralised here and only the colour behaviour is kept) */
     .site-nav .logo { position: static; width: auto; height: auto; margin-top: 2px; line-height: 1.2; border: 0; font-size: 28px; font-weight: 700; white-space: nowrap; text-decoration: none !important; }
     .site-nav.scrolled .logo { position: static; top: auto; }
-    .site-nav .site-navigation .site-menu > li > a { font-size: 18px; padding: 10px 18px; }
+    .site-nav .site-navigation .site-menu > li > a { font-size: 16px; padding: 10px 16px; }
+
+    /* Navbar brand: lab name | EMBL logo, side by side at the left of the bar */
+    .site-nav .brand-group { float: left; display: flex; align-items: center; }
+    .site-nav .brand-group .logo { float: none; }
+    .site-nav .brand-sep { font-size: 26px; font-weight: 400; line-height: 1; color: rgba(255, 255, 255, .5); margin: 2px .8rem 0; }
+    .site-nav.scrolled .brand-sep { color: rgba(0, 0, 0, .22); }
+    .site-nav .brand-embl { display: block; line-height: 0; margin-top: 3px; }
+    /* EMBL brand guidelines: the logo is never reproduced below 30px wide */
+    .site-nav .brand-embl img { width: 80px; min-width: 30px; height: auto; }
+    /* Two official versions of the mark: the white-on-green one while the
+       navbar is transparent over the hero photo, the colour one once .scrolled
+       gives the bar a white background. */
+    .site-nav .brand-embl .embl-colour { display: none; }
+    .site-nav.scrolled .brand-embl .embl-white { display: none; }
+    .site-nav.scrolled .brand-embl .embl-colour { display: inline; }
+    /* on the narrowest screens the lab name + burger already fill the bar */
+    @media (max-width: 575.98px) { .site-nav .brand-sep, .site-nav .brand-embl { display: none; } }
 
     /* Hero */
     .hero-cta { margin-top: 2rem; }
@@ -124,7 +141,14 @@
     <div class="container">
       <div class="site-navigation text-center">
 
-        <a href="#home-section" class="logo float-left text-white smoothscroll">The Chen Lab</a>
+        <div class="brand-group">
+          <a href="#home-section" class="logo text-white smoothscroll">The Chen Lab</a>
+          <span class="brand-sep" aria-hidden="true">|</span>
+          <a href="https://www.embl.org/sites/rome/" class="brand-embl" target="_blank" rel="noopener">
+            <img src="images/EMBL_Logo_Package/EMBL_logo_png_DIGITAL/EMBL_logo_white_DIGITAL.png" class="embl-white" alt="EMBL Rome">
+            <img src="images/EMBL_Logo_Package/EMBL_logo_png_DIGITAL/EMBL_logo_colour_DIGITAL.png" class="embl-colour" alt="EMBL Rome">
+          </a>
+        </div>
 
         <ul class="js-clone-nav ml-0 pl-0 d-none d-lg-inline-block site-menu mx-auto text-center">
           <li><a href="#about-section" class="nav-link">Jenny Chen</a></li>
@@ -180,7 +204,7 @@
 
           <p>I am passionate about developing high-throughput sequencing and computational approaches to understand the molecular mechanisms that give rise to this diversity, with a current focus on investigating innate animal behaviors.</p>
 
-          <p>I received my PhD in Bioinformatics and Integrative Genomics from MIT, where I was advised by <a href="https://www.gene.com/scientists/our-scientists/aviv-regev" target="_blank" rel="noopener">Aviv Regev</a>. I then became a Harvard Data Science Fellow and NIH K99/R00 Fellow, and worked in collaboration with <a href="https://hoekstra.oeb.harvard.edu/" target="_blank" rel="noopener">Hopi Hoekstra</a> and <a href="http://eddylab.org/" target="_blank" rel="noopener">Sean Eddy</a> to study the genetic basis of monogamy-related behaviors in <em>Peromyscus</em> deer mice.</p>
+          <p>I am currently a Group Leader at <a href="https://www.embl.org/sites/rome/" target="_blank">EMBL Rome</a>. Prior to this, I was a Harvard Data Science Fellow and MOSAIC NIH K99/R00 Fellow, and I worked in collaboration with <a href="https://hoekstra.oeb.harvard.edu/" target="_blank" rel="noopener">Hopi Hoekstra</a> and <a href="http://eddylab.org/" target="_blank" rel="noopener">Sean Eddy</a> on the genetic basis of monogamy-related behaviors in <em>Peromyscus</em> deer mice. I received my PhD in Bioinformatics and Integrative Genomics from MIT, where I was advised by <a href="https://www.gene.com/scientists/our-scientists/aviv-regev" target="_blank" rel="noopener">Aviv Regev</a>.</p>
 
           <p class="mt-4">
             <a href="files/Jenny_Chen_CV.2026.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
